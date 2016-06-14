@@ -37,6 +37,22 @@ The following files are available for the train and test data. Their description
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
+##Subject
+The id of the subject for which the calculations are made.
+All the values listed for the subject are the mean values
+grouped by the subject's id and the activity that was carried
+out.
+
+##Activity
+The column that indicates what the type of activity
+done by the subject possible values are:
+
+* WALKING
+* WALKING_UPSTAIRS
+* WALKING_DOWNSTAIRS
+* SITTING
+* STANDING
+* LAYING
 
 ## Transformation details
 
@@ -48,7 +64,9 @@ There are 5 parts:
 4. Appropriately labels the data set with descriptive activity names.
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-## Variables for the tidydata.txt
+
+## All of the following columns are averaged by Subject and Activity
+
 tidydata.txt has 180 records with 88 variables.
 - TimeBodyAccelerometerMeanX
 - TimeBodyAccelerometerMeanY
