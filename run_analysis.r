@@ -1,3 +1,4 @@
+library(data.table)
 setwd("./Desktop/cleandata/UCI HAR Dataset/")
 ###merge dataset
 #metadata
@@ -17,11 +18,9 @@ train<-cbind(featuretrain,activitytrain,subjecttrain)
 test<-cbind(featuretest,activitytest,subjecttest)
 colnames(train) <- c(t(features[2]),"Activity","Subject")
 colnames(test)<-c(t(features[2]),"Activity","Subject")
-dim(test)
 
 #combine the 2 datasets
 data<-rbind(test,train)
-library(memisc)
 
 ###Extracts only the measurements on the 
 ###mean and standard deviation for each measurement.
@@ -32,7 +31,6 @@ dim(data2)
 
 ###Uses descriptive activity names 
 ###to name the activities in the data set
-number<-dim(data)[1]
 data2$Activity<-as.character(data2$Activity)
 for (i in 1:6){
  data2$Activity[data2$Activity==6]<-as.character(activity[i,2])
@@ -59,11 +57,8 @@ names(data2)<-gsub("[-()]","",names(data2))
 
 ###From the data set in step 4, creates a second, 
 ###independent tidy data set with the average of 
-###each variable for each activity and each subject.
-library(plyr)
+###each variable for each activity and each subject.                     
 data3<-aggregate(. ~Subject + Activity, data2, mean)
 data3<-data3[order(data3$Subject,data3$Activity),]
 dim(data3)
 write.table(data3, file = "tidydata.txt",row.name=FALSE)
-
-
