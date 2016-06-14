@@ -54,7 +54,7 @@ contains 180 rows  and 88 columns
  FreqBodyAccelerometerJerkMeanY 
  FreqBodyAccelerometerJerkMeanZ 
  FreqBodyAccelerometerJerkSTDX 
- FreqBodyAccelerometerJerkSTDY 
+ FreqBodyAccelerometerJerkSTDY/n 
  FreqBodyAccelerometerJerkSTDZ 
  FreqBodyAccelerometerJerkMeanFreqX 
  FreqBodyAccelerometerJerkMeanFreqY 
