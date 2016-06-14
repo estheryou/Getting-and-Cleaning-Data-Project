@@ -2,7 +2,6 @@ tidydata.txt
 contains 180 rows  and 88 columns
 
  TimeBodyAccelerometerMeanX 
- 
  TimeBodyAccelerometerMeanY 
  TimeBodyAccelerometerMeanZ 
  TimeBodyAccelerometerSTDX 
