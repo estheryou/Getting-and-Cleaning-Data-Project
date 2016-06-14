@@ -22,13 +22,12 @@ dim(test)
 #combine the 2 datasets
 data<-rbind(test,train)
 library(memisc)
-codebook(data)
+
 ###Extracts only the measurements on the 
 ###mean and standard deviation for each measurement.
 part<-grep(".*[Mm]ean.*|.*[Ss]td.*",names(data))
 partition<-c(part,562,563)
 data2<-data[,partition]
-length(partition)
 dim(data2)
 
 ###Uses descriptive activity names 
@@ -57,7 +56,8 @@ names(data2)<-gsub("-freq()", "Freq", names(data2), ignore.case = TRUE)
 names(data2)<-gsub("angle", "Angle", names(data2))
 names(data2)<-gsub("gravity", "Gravity", names(data2))
 names(data2)<-gsub("[-()]","",names(data2))
-
+c<-names(data2)
+c
 ###From the data set in step 4, creates a second, 
 ###independent tidy data set with the average of 
 ###each variable for each activity and each subject.
