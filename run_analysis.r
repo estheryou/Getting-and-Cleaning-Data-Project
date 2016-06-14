@@ -56,8 +56,7 @@ names(data2)<-gsub("-freq()", "Freq", names(data2), ignore.case = TRUE)
 names(data2)<-gsub("angle", "Angle", names(data2))
 names(data2)<-gsub("gravity", "Gravity", names(data2))
 names(data2)<-gsub("[-()]","",names(data2))
-c<-names(data2)
-c
+
 ###From the data set in step 4, creates a second, 
 ###independent tidy data set with the average of 
 ###each variable for each activity and each subject.
