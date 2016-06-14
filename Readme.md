@@ -19,6 +19,6 @@ Appropriately labels the data set with descriptive variable names.
 Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Documents:
-1.run_Analysis.r
-2.codebook.md
-3.tidydata.txt
+- run_Analysis.r
+- codebook.md
+- tidydata.txt
